@@ -16,6 +16,7 @@ function createBooks() {
         createBook('book1'),
         createBook('book2'),
         createBook('book3'),
+        createBook('book3'),
 
 
     ]
