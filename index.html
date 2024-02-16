@@ -10,33 +10,25 @@
 
 <body onload="onInit()">
     <h1>Book Shop</h1>
+<section>
+    <button class="add-book-btn" onclick="onAddBook()">Add a Book</button>
+</section>
+   
+
+
     <table class="books-list">
-        <!-- <tr>
-            <th>Title</td>
-            <th>price</td>
-            <th>Actions</td>
-        </tr >
-        <tr>
-            <td>book1</td>
-            <td>120</td>
-            <td><button onclick="onRmoveBook()">Delete</button><button>2</button>bt</td>
-        </tr>
-
-
-        <tr>
-            <td>book2</td>
-            <td>300</td>
-            <td>Actions</td>
-        </tr>
-        <tr>
-            <td>book3</td>
-            <td>87</td>
-            <td>Actions</td>
-        </tr> -->
-
-
 
     </table>
+
+
+    <dialog class="book-details">
+        <form method="dialog">
+            <h2>Book: <span></span></h2>
+            <pre></pre>
+            <img src="" alt="">
+            <button>X</button>
+        </form>
+    </dialog>
 
 
     <script src="js/services/util.service.js"></script>

@@ -23,8 +23,18 @@ function updatePrice(newPrice, bookId) {
 }
 
 
+function addBook(book, price) {
+ 
+    newBook = createBook(book, price)
+gBooks.unshift(newBook)
+
+}
 
 
+function readBook(bookId) {
+book = gBooks.find(book => book.id === bookId)
+return book
+}
 
 
 
@@ -37,21 +47,22 @@ function createBooks() {
 
     gBooks = [
 
-        createBook('book1'),
-        createBook('book2'),
-        createBook('book3'),
-        createBook('book3'),
+        createBook('The Advetures of lori Ipsi', 120),
+        createBook('World Atlas', 300, 'img/atlas.jpg'),
+        createBook('Zorba the Greek', 87),
+        createBook('Sapianes', 99),
     ]
 
 }
 
 
-function createBook(title) {
+function createBook(title, price = getRandomInt(30, 150), url) {
 
     return {
         id: makeId(),
         title,
-        price: getRandomInt(80, 120),
+        price: price,
+        imgUrl: url,
 
     }
 

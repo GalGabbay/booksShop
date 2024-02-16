@@ -1,7 +1,8 @@
 *{
 box-sizing: border-box;
+padding: 10px 5px;
 
-text-align: center;
+
 }
 
 
@@ -12,22 +13,38 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
+h1 {
+    text-align: center;
+
+}
 
 .books-list {
+    text-align: center;
 
 background-color: rgb(227, 209, 209);
-border: 2px, solid, black
+border-radius: 10px;
+
 
 }
 
  th, td {
 
-    border: 1px, solid, black;
     border-collapse: collapse;
     background-color: gray;
 
+}
+
+button {
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+
+section .add-book-btn {
+text-align: start;
 
 }
 
