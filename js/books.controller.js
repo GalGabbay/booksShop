@@ -11,8 +11,8 @@ function onInit() {
 function renderBooks() {
 
     const books = getBooks()
-    const strHtml = 
-    `<tr>
+    const strHtml =
+        `<tr>
     <th>Title</td>
     <th>price</td>
     <th>Actions</td>
@@ -20,10 +20,12 @@ function renderBooks() {
 
     const strHtmls = books.map(book =>
 
-   `<tr>
+        `<tr>
     <td>${book.title}</td>
     <td>${book.price}</td>
-    <td><button onclick="onRemoveBook('${book.id}')">Delete</button><button>2</button><button>3</button></td>
+    <td><button onclick="onRemoveBook('${book.id}')">Delete</button>
+        <button onclick="onUpdateBook('${book.id}')">Update</button>
+        <button>3</button></td>
     </tr>`
     )
     const elBooksList = document.querySelector('.books-list')
@@ -34,7 +36,16 @@ function renderBooks() {
 
 function onRemoveBook(bookId) {
     removeBook(bookId)
-renderBooks()
+    renderBooks()
+}
+
+
+function onUpdateBook(bookId) {
+    var newPrice = +prompt('Enter A New Price')
+    updatePrice(newPrice, bookId)
+    renderBooks()
+
+
 }
 
 

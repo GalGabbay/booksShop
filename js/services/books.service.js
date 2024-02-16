@@ -3,24 +3,24 @@ var gBooks
 
 createBooks()
 
-function getBooks(){
-return gBooks
+function getBooks() {
+    return gBooks
 }
 
 
 
 function removeBook(bookId) {
-    console.log(bookId)
-const book = gBooks.findIndex(book =>  book.id === bookId)
-    console.log(book)
+    const book = gBooks.findIndex(book => book.id === bookId)
     gBooks.splice(book, 1)
 
 }
 
+function updatePrice(newPrice, bookId) {
+    console.log(newPrice, bookId)
+    const book = gBooks.find(book => book.id === bookId)
+    book.price = newPrice
 
-
-
-
+}
 
 
 
