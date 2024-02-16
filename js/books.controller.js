@@ -2,37 +2,39 @@
 
 function onInit() {
 
-renderBooks()
+    renderBooks()
 
 
 }
 
 
-function renderBooks(){
+function renderBooks() {
 
-const books = getBooks()
-const strHtml = `        <tr>
-<th>Title</td>
-<th>price</td>
-<th>Actions</td>
-</tr >`
+    const books = getBooks()
+    const strHtml = 
+    `<tr>
+    <th>Title</td>
+    <th>price</td>
+    <th>Actions</td>
+    </tr >`
 
-const strHtmls = books.map(book=>
-    
-    
-    `
+    const strHtmls = books.map(book =>
 
-    <tr>
+   `<tr>
     <td>${book.title}</td>
     <td>${book.price}</td>
-    <td><button>1</button><button>2</button><button>3</button></td>
-</tr>
-    
-    `
+    <td><button onclick="onRemoveBook('${book.id}')">Delete</button><button>2</button><button>3</button></td>
+    </tr>`
     )
-const elBooksList = document.querySelector('.books-list')
-elBooksList.innerHTML = strHtml + strHtmls.join('')
+    const elBooksList = document.querySelector('.books-list')
+    elBooksList.innerHTML = strHtml + strHtmls.join('')
 
+}
+
+
+function onRemoveBook(bookId) {
+    removeBook(bookId)
+renderBooks()
 }
 
 
@@ -59,7 +61,7 @@ elBooksList.innerHTML = strHtml + strHtmls.join('')
 
 
 
-function onChangeSortBy(){
+function onChangeSortBy() {
 
     setSortBy()
 }

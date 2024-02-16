@@ -9,6 +9,30 @@ return gBooks
 
 
 
+function removeBook(bookId) {
+    console.log(bookId)
+const book = gBooks.findIndex(book =>  book.id === bookId)
+    console.log(book)
+    gBooks.splice(book, 1)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function createBooks() {
 
     gBooks = [
@@ -17,14 +41,9 @@ function createBooks() {
         createBook('book2'),
         createBook('book3'),
         createBook('book3'),
-
-
     ]
 
-
-
 }
-
 
 
 function createBook(title) {
