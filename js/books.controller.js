@@ -25,7 +25,7 @@ function renderBooks() {
     <td>${book.price}</td>
     <td>
         <button onclick="onReadBook(event,'${book.id}')">Read</button>
-        <button onclick="onUpdateBook('${book.id}')">Update</button>
+        <button onclick="onUpdateBook('${book.id}', ${book.price})">Update</button>
         <button onclick="onRemoveBook('${book.id}')">Delete</button>
     </td>
     </tr>`
@@ -42,8 +42,8 @@ function onRemoveBook(bookId) {
 }
 
 
-function onUpdateBook(bookId) {
-    var newPrice = +prompt('Enter A New Price')
+function onUpdateBook(bookId, bookPrice) {
+    var newPrice = +prompt('Enter A New Price', bookPrice)
     updatePrice(newPrice, bookId)
     renderBooks()
 }
@@ -62,7 +62,7 @@ function onReadBook(ev, bookId) {
     const elDialog = document.querySelector('.book-details')
     const elSpan = elDialog.querySelector('.book-details span')
 
-    elSpan.innerText = JSON.stringify(book, null, 4)
+    elSpan.innerText = JSON.stringify(book, null, 6)
     elImg = elDialog.querySelector('.book-details img')
     elDialog.showModal()
     elImg.src = book.imgUrl

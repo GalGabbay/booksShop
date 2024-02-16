@@ -50,7 +50,7 @@ function createBooks() {
         createBook('The Advetures of lori Ipsi', 120),
         createBook('World Atlas', 300, 'img/atlas.jpg'),
         createBook('Zorba the Greek', 87),
-        createBook('Sapianes', 99),
+        createBook('Sapianes', 99, 'img/sapians.jpg'),
     ]
 
 }

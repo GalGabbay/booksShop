@@ -48,5 +48,22 @@ text-align: start;
 
 }
 
+img {
+    width: 15em;
+    height: 15em;
+  }
+
+  dialog {
+    position: relative;
+    border-radius: 10px;
+  }
+
+  dialog button {
+    position: absolute;
+    top:  0;
+    right: 0;
+
+
+  }
 
 
