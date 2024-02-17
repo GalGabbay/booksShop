@@ -1,3 +1,4 @@
+'use strict'
 
 
 function onInit() {
@@ -63,12 +64,20 @@ function onReadBook(ev, bookId) {
     const elSpan = elDialog.querySelector('.book-details span')
 
     elSpan.innerText = JSON.stringify(book, null, 6)
-    elImg = elDialog.querySelector('.book-details img')
+    const elImg = elDialog.querySelector('.book-details img')
     elDialog.showModal()
     elImg.src = book.imgUrl
 
 }
 
+function onSetFilterBy() {
+    const text = document.querySelector('.filter-input').value
+    console.log(text)
+    setFilterBy(text)
+    renderBooks()
+
+
+}
 
 
 

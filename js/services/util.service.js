@@ -1,3 +1,4 @@
+'use strict'
 
 
 function makeId(length = 5) {
