@@ -70,9 +70,11 @@ function onReadBook(ev, bookId) {
 
 }
 
-function onSetFilterBy() {
+function onSetFilterBy(ev) {
+
     const text = document.querySelector('.filter-input').value
     console.log(text)
+
     setFilterBy(text)
     renderBooks()
 

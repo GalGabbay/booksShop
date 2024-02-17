@@ -10,9 +10,10 @@
 
 <body onload="onInit()">
     <h1>Book Shop</h1>
-    <input type="text" class="filter-input" oninput="onSetFilterBy()">
-        <button>clear</button>
-
+    <form action="">
+        <input type="text" class="filter-input" oninput="onSetFilterBy(event)">
+        <button onclick="clearFilter(event)">clear</button>
+    </form>
 
 
     <section>

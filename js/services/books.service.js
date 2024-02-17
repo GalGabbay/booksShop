@@ -12,11 +12,6 @@ function getBooks() {
 
     return gBooks.filter(book => book.title.toLowerCase().includes(gFilterBy.toLowerCase()))
 
-
-    // return .filter(book => {
-    //     if (gFilterBy === 'done') return todo.isDone
-    //     else if (gFilterBy === 'active') return !todo.isDone
-    // })
 }
 
 
