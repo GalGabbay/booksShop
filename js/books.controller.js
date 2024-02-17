@@ -39,6 +39,7 @@ function renderBooks() {
 
 function onRemoveBook(bookId) {
     removeBook(bookId)
+    successMessage('You have successfully deleted a book')
     renderBooks()
 }
 
@@ -46,14 +47,18 @@ function onRemoveBook(bookId) {
 function onUpdateBook(bookId, bookPrice) {
     var newPrice = +prompt('Enter A New Price', bookPrice)
     updatePrice(newPrice, bookId)
+    successMessage('You have successfully updated a book')
     renderBooks()
+
 }
 
 function onAddBook() {
     var bookTitle = prompt('Enter a title')
     var bookPrice = +prompt('Enter a price')
     addBook(bookTitle, bookPrice)
+    successMessage('You have successfully added a book')
     renderBooks()
+
 
 }
 
@@ -64,9 +69,10 @@ function onReadBook(ev, bookId) {
     const elSpan = elDialog.querySelector('.book-details span')
 
     elSpan.innerText = JSON.stringify(book, null, 6)
-    const elImg = elDialog.querySelector('.book-details img')
+    const elImg = elDialog.querySelector('.img-modal')
+    console.log(elImg)
+    elImg.innerHTML = `<img src="${book.imgUrl}" alt="">`
     elDialog.showModal()
-    elImg.src = book.imgUrl
 
 }
 
@@ -82,10 +88,16 @@ function onSetFilterBy(ev) {
 }
 
 
+function successMessage(text) {
+    const elDialog = document.querySelector('.book-details')
+    const elSpan = elDialog.querySelector('.book-details span')
+    const elH2 = elDialog.querySelector('h2')
+    console.log(elH2)
+    elSpan.innerText = text
 
+    elDialog.showModal()
 
-
-
+}
 
 
 
