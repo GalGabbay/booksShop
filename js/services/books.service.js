@@ -34,10 +34,10 @@ function updatePrice(newPrice, bookId) {
 
 function addBook(book, price) {
 
-   const newBook = _createBook(book, price)
+    const newBook = _createBook(book, price)
     gBooks.unshift(newBook)
     _saveBooks()
-    
+
 }
 
 
@@ -46,15 +46,27 @@ function readBook(bookId) {
     return book
 }
 
-function setFilterBy(text){
+function setFilterBy(text) {
     gFilterBy = text
 
 }
 
+function getExpensiveBooks() {
+    return gBooks.filter(book => book.price > 200).length
 
 
 
+}
 
+function getCheapBooks() {
+    return gBooks.filter(book => book.price < 50).length
+
+}
+
+function getAverageBooks() {
+    return  gBooks.filter(book => book.price > 80 && book.price < 200).length
+
+}
 
 
 

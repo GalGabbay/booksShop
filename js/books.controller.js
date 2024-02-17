@@ -34,6 +34,7 @@ function renderBooks() {
     const elBooksList = document.querySelector('.books-list')
     elBooksList.innerHTML = strHtml + strHtmls.join('')
 
+    renderStats()
 }
 
 
@@ -98,6 +99,17 @@ function successMessage(text) {
 
     elDialog.showModal()
 
+}
+
+function renderStats() {
+    const elExpensive = document.querySelector('.expensive-books')
+
+    const elAverage = document.querySelector('.average-books')
+    const elCheap = document.querySelector('.cheap-books')
+    
+    elExpensive.innerText = getExpensiveBooks()
+    elAverage.innerText = getAverageBooks()
+    elCheap.innerText = getCheapBooks()
 }
 
 
