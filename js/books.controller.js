@@ -55,6 +55,7 @@ function onUpdateBook(bookId, bookPrice) {
 function onAddBook() {
     var bookTitle = prompt('Enter a title')
     var bookPrice = +prompt('Enter a price')
+    if (!bookTitle || !bookPrice) return
     addBook(bookTitle, bookPrice)
     successMessage('You have successfully added a book')
     renderBooks()
