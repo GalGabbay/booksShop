@@ -9,33 +9,48 @@
 </head>
 
 <body onload="onInit()">
-    <h1>Book Shop</h1>
-    <form action="">
-        <input type="text" class="filter-input" oninput="onSetFilterBy(event)">
-        <button onclick="clearFilter(event)">clear</button>
-    </form>
-
-
-    <section>
-        <button class="add-book-btn" onclick="onAddBook()">Add a Book</button>
-    </section>
-
-
-
-    <table class="books-list">
-
-    </table>
-
-
-    <dialog class="book-details">
-        <form method="dialog">
-            <h2><span></span></h2>
-            <pre></pre>
-            <span class="img-modal"></span>
-            <button>X</button>
+    <main>
+        <h1>Book Shop</h1>
+        <form action="">
+            <input type="text" class="filter-input" oninput="onSetFilterBy(event)">
+            <button onclick="clearFilter(event)">clear</button>
         </form>
-    </dialog>
 
+
+        <section>
+            <button class="add-book-btn" onclick="onAddBook()">Add a Book</button>
+            <!-- <button onclick="cardOrTable()">cards/table</button> -->
+        </section>
+
+        <section class="grid-container">
+        </section>
+
+        <table class="books-list">
+            <thead>
+                <tr>
+                    <th>Title</td>
+                    <th>price</td>
+                    <th>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+            <tbody class="books-content"></tbody>
+
+        </table>
+
+
+        <dialog class="book-details">
+            <form method="dialog">
+                <h2><span></span></h2>
+                <pre></pre>
+                <img src="" alt="">
+                <button>X</button>
+            </form>
+        </dialog>
+    </main>
     <footer>
         <section>
             <span>Expensive Books:</span>

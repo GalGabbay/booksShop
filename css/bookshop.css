@@ -1,47 +1,50 @@
 * {
   box-sizing: border-box;
   padding: 10px 5px;
+}
 
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
 }
 
-
 body {
-
-  display: flex;
   margin: 0;
-  flex-direction: column;
-  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 h1 {
   text-align: center;
-
+  
 }
 
-.books-list {
+ .books-list {
   text-align: center;
-
-  background-color: rgb(227, 209, 209);
   border-radius: 10px;
-  /* max-height: 60px; */
+}
 
-
+.cards {
+  display: grid;
 }
 
 th,
 td {
-
+  border: 3px solid black;
   background-color: gray;
+  color: aqua;
+  border-radius: 10px;
+
 
 }
 
 button {
   cursor: pointer;
   border-radius: 7px;
+  background-color: aqua;
 }
+
 
 
 section .add-book-btn {
@@ -78,5 +81,64 @@ footer {
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  position: fixed;
+  position: sticky;
+}
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5) 1fr;
+  grid-template-rows: repeat(5) 1fr;
+  width: max-content;
+  background-color: white;
+  gap: 5px;
+}
+
+.item {
+  font-family: sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  padding-inline: .1em;
+  background-color: lightblue;
+  border: 1px solid black;
+
+}
+
+.item1 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: lightblue;
+}
+
+.item2 {
+  grid-row: 4 / 5;
+  grid-column: 4 / 5;
+  background-color: rgb(240, 209, 189);
+}
+
+.item3 {
+  grid-row: -2 / -3;
+  grid-column: 6 / -2;
+  background-color: rgb(220, 240, 189);
+}
+
+.item4 {
+  grid-row: 6 / span 2;
+  grid-column: 4 / span 2;
+  background-color: rgb(240, 189, 229);
+}
+
+.item5 {
+  grid-row: 2;
+  grid-column: 6;
+  background-color: rgb(231, 231, 131);
+}
+
+.item6 {
+  grid-area: 5 / 6;
+  background-color: rgb(143, 164, 173);
 }
